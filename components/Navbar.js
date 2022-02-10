@@ -13,13 +13,11 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { FaSun, FaMoon, FaTimes, FaStream } from "react-icons/fa";
-//import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
-//const MotionFlex = motion(Flex);
-//const MotionBox = motion(Box);
-//const MotionText = motion(Text)
-
-
+const MotionFlex = motion(Flex);
+const MotionBox = motion(Box);
+const MotionText = motion(Text);
 
 const Navbar = () => {
   const value = useColorModeValue("white", "gray.800");
@@ -27,7 +25,7 @@ const Navbar = () => {
   const toggleMenu = () => setShow(!show);
 
   return (
-    <Flex
+    <MotionFlex
       mb={6}
       p={4}
       position="sticky"
@@ -41,6 +39,9 @@ const Navbar = () => {
       wrap="wrap"
       w="100%"
       overflow="auto"
+      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: -180 }}
+      transition={{ ease: "easeInOut", duration: 1, delay: 0.6 }}
     >
       <Box>
         <Heading>Logo</Heading>
@@ -75,22 +76,22 @@ const Navbar = () => {
           </Box>
         </Flex>
       </Box>
-    </Flex>
+    </MotionFlex>
   );
 };
 
 const NavItem = ({ children, isLast, to = "/", ...rest }) => {
   return (
     <NextLink href={to} passHref>
-      <Text
+      <MotionText
         display="block"
         mb={{ base: isLast ? 0 : 8, sm: 0 }}
         mr={{ base: 0, sm: isLast ? 0 : 8 }}
-        //whileHover={{scale:1.2}}
+        whileHover={{ scale: 1.2 }}
         {...rest}
       >
         <Link>{children}</Link>
-      </Text>
+      </MotionText>
     </NextLink>
   );
 };
