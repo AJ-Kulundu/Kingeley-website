@@ -3,7 +3,7 @@ import {
   Flex,
   Spacer,
   Box,
-  Heading,
+  Img,
   Text,
   useColorMode,
   IconButton,
@@ -44,7 +44,10 @@ const Navbar = () => {
       transition={{ ease: "easeInOut", duration: 1, delay: 0.6 }}
     >
       <Box>
-        <Heading>Logo</Heading>
+        <Img 
+        boxSize="50px" 
+        alt="Kingely Logo" 
+        src="/Kingeley logo.png" />
       </Box>
       <Spacer />
       <Box display={{ base: "block", md: "none" }}>
@@ -70,7 +73,7 @@ const Navbar = () => {
           <NavItem to="/">Home</NavItem>
           <NavItem to="/portfolio">Portfolio</NavItem>
           <NavItem to="/about">About</NavItem>
-          <NavItem to="/contact">Contact</NavItem>
+          <NavItem to="/service">Services</NavItem>
           <Box display={{ base: "none", md: "block" }} mr={{ md: 4, lg: 6 }}>
             <Toggle />
           </Box>
