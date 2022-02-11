@@ -5,7 +5,7 @@ import {Heading } from '@chakra-ui/react';
 
 function contact() {
   return(
-      <Heading>Contact</Heading>
+      <Heading>Services</Heading>
   );
 }
 
