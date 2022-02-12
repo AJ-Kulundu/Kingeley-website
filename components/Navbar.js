@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <MotionFlex
-      mb={6}
+      mb={2}
       p={4}
       position="sticky"
       top={0}
