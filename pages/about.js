@@ -35,18 +35,18 @@ const About = () => {
                 position: "absolute",
                 bottom: 1,
                 left: 0,
-                bg: "blue.400",
+                bg: useColorModeValue("yellow.200","yellow.400"),
                 zIndex: -1,
               }}
             >
               About
             </Text>
             <br />{" "}
-            <Text color={"blue.400"} as={"span"}>
+            <Text color={useColorModeValue("yellow.200","yellow.400")} as={"span"}>
               Kingeley
             </Text>{" "}
           </Heading>
-          <Text as='p' fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
+          <Text as='p' fontSize={{ base: "md", lg: "lg" }} >
             One bitter cold Sunday, an old farmer trudged for miles through a
             blizzard to reach the small mountain church he attended. No one else
             showed up, except the preacher. Looking around the empty pews, the
@@ -66,7 +66,7 @@ const About = () => {
             the lot of them
           </Text>
           <br />
-          <Text  as='p' fontSize={{ base: "md", lg: "lg" }} color={"gray.500"} >
+          <Text  as='p' fontSize={{ base: "md", lg: "lg" }}>
           <strong>Moral of the Story: </strong>It’s important to adjust what information you deliver and how you deliver it based on who’s on the receiving end.
           </Text>
           {/* <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
