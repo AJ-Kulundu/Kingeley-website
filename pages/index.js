@@ -1,9 +1,21 @@
 import Head from 'next/head'
 import {Stack,Flex,Heading, Text,Button, Img,useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
+import {useRouter} from 'next/router'
 
 export default function Home() {
-  const text1 = useColorModeValue("");
+  const router = useRouter();
   const text2 = useColorModeValue("yellow.200","yellow.400");
+
+  const aboutClick = e => {
+    e.preventDefault()
+    router.push('/about')
+  }
+  
+  const serviceClick = e => {
+    e.preventDefault()
+    router.push('/service')
+  }
+
   return (
     <div>
       <Head>
@@ -46,10 +58,11 @@ export default function Home() {
               color={useColorModeValue("gray.400", "gray.800")}
               _hover={{
                 bg: "yellow.300",
-              }}>
+              }}
+              onClick={serviceClick}>
               Our Services
             </Button>
-            <Button rounded={'full'}>About us</Button>
+            <Button rounded={'full'} onClick={aboutClick}>About us</Button>
           </Stack>
         </Stack>
       </Flex>
