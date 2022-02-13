@@ -48,7 +48,7 @@ export default function Home() {
             </Text>{' '}
           </Heading>
           <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
-            The project board is an exclusive resource for contract work. It is
+            Kingeley is an agency that focuses on design and creativity. It is
             perfect for freelancers, agencies, and moonlighters.
           </Text>
           <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
