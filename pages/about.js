@@ -141,7 +141,7 @@ const Feature = ({ title, text, icon,label }) => {
       alt={label}
       />
       <Text fontWeight={600}>{title}</Text>
-      <Text color={'gray.600'}>{text}</Text>
+      <Text >{text}</Text>
     </Stack>
   );
 };
