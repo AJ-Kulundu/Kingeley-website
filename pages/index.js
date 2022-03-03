@@ -18,11 +18,6 @@ export default function Home() {
 
   return (
     <div>
-      <Head>
-        <title>Kingley Agency</title>
-        <meta name="description" content="Kingeley Agencies website" />
-        <link rel="icon" href="/Kingeley logo.png" />
-      </Head>
       <Stack minH={'90vh'} direction={{ base: 'column', md: 'row' }}>
       <Flex p={8} flex={1} align={'center'} justify={'center'}>
         <Stack spacing={6} w={'full'} maxW={'lg'}>
